@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Serene Islamic Palette */
+    --background: 210 20% 98%;
+    /* Soft blue-ish white (Paper) */
+    --foreground: 215 25% 27%;
+    /* Dark Slate (Ink) */
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    --primary: 175 60% 35%;
+    /* Deep Teal/Turquoise */
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 45 60% 50%;
+    /* Gold/Ochre */
+    --secondary-foreground: 215 25% 27%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 175 40% 90%;
+    /* Light Teal tint */
+    --accent-foreground: 175 60% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 175 60% 35%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 215 25% 15%;
+    /* Deep Night Blue */
+    --foreground: 210 20% 98%;
+
+    --card: 215 25% 20%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 215 25% 20%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 175 60% 45%;
+    /* Brighter Teal for Dark Mode */
+    --primary-foreground: 215 25% 15%;
+
+    --secondary: 45 60% 50%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 215 25% 25%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 175 60% 20%;
+    --accent-foreground: 175 60% 45%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 25%;
+    --input: 215 25% 25%;
+    --ring: 175 60% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
